@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Muhammad Haikal Helmi</title>
+    <style>
+        /* CSS Reset Dasar */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Styling Bagian Header dan Navigasi */
+        header {
+            background-color: #2c3e50;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+        }
+
+        nav {
+            background-color: #34495e;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Styling khusus untuk tombol Profile */
+        .btn-profile {
+            background-color: #e74c3c;
+            font-weight: bold;
+        }
+
+        .btn-profile:hover {
+            background-color: #c0392b;
+        }
+
+        /* Styling Bagian Konten Utama */
+        main {
+            padding: 20px;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+
+        /* Styling Section / Card */
+        section {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        article h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #1abc9c;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        /* === STYLING TAMBAHAN UNTUK DATA KUSTOM === */
+        
+        /* Hero Section */
+        #hero {
+            text-align: center;
+            background-color: transparent;
+            box-shadow: none;
+            padding: 10px;
+        }
+
+        #foto-profil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #1abc9c;
+            margin-bottom: 15px;
+        }
+
+        #hero h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        #hero p {
+            color: #555;
+        }
+
+        #btn-github {
+            display: inline-block;
+            background-color: #2c3e50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            transition: 0.3s;
+        }
+
+        #btn-github:hover {
+            background-color: #1abc9c;
+        }
+
+        /* Table Informasi Pribadi */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        table td {
+            padding: 10px;
+            border-bottom: 1px solid #eee;
+        }
+
+        table td:first-child {
+            font-weight: bold;
+            width: 30%;
+            color: #2c3e50;
+        }
+
+        /* List Pendidikan */
+        .education-list {
+            list-style-type: disc;
+            margin-left: 20px;
+            color: #555;
+        }
+
+        .education-list li {
+            margin-bottom: 8px;
+        }
+
+        /* Skill Badges */
+        #skill-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .badge {
+            background-color: #1abc9c;
+            color: white;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* Layout Grid sederhana untuk daftar proyek (Latihan 4 asli) */
+        .project-container {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project-card {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            flex: 1;
+            min-width: 250px;
+        }
+
+        /* Styling Bagian Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2c3e50;
+            color: white;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Website Portofolio</h1>
+        <nav>
+            <ul>
+                <li><a href="../Pertemuan_1/my_portofolio/css/index.html" class="btn-profile">Profile</a></li>
+                <li><a href="#about">Tentang Saya</a></li>
+                <li><a href="#info">Informasi Pribadi</a></li>
+                <li><a href="#education">Pendidikan & Keahlian</a></li>
+                <li><a href="#portfolio">Portofolio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="container">
+        <section id="hero">
+            <img src="../Pertemuan_1/my_portofolio/css/images/foto profile cv.png" id="foto-profil" alt="Foto Profil Muhammad Haikal Helmi">
+            <h1>Muhammad Haikal Helmi</h1>
+            <p>Mahasiswa Pemrograman Web | Institut Bisnis dan Informatika Kesatuan</p>
+            <a href="https://github.com/Haikalhelmi" target="_blank" id="btn-github">
+                &#128279; Profil GitHub Saya
+            </a>
+        </section>
+
+        <section id="about" class="card">
+            <article>
+                <h2>Tentang Saya</h2>
+                <p style="font-size: 15px; line-height: 1.7; color: #555555;">
+                    Halo! Nama saya <b>Muhammad Haikal Helmi</b>. Saya adalah mahasiswa 
+                    yang sedang belajar Pemrograman Web dan sangat tertarik dalam 
+                    pengembangan perangkat lunak.
+                </p>
+            </article>
+        </section>
+
+        <section id="info" class="card">
+            <article>
+                <h2>Informasi Pribadi</h2>
+                <table>
+                    <tr>
+                        <td>Nama Lengkap</td>
+                        <td>Muhammad Haikal Helmi</td>
+                    </tr>
+                    <tr>
+                        <td>NPM</td>
+                        <td>242310031</td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>242310031@student.ibik.ac.id</td>
+                    </tr>
+                    <tr>
+                        <td>Alamat</td>
+                        <td>Kota Bogor, Jawa Barat, Bogor Selatan</td>
+                    </tr>
+                </table>
+            </article>
+        </section>
+
+        <section id="education" class="card">
+            <article style="margin-bottom: 25px;">
+                <h2>Riwayat Pendidikan</h2>
+                <ul class="education-list">
+                    <li>SMK Informatika Pesat Bogor &nbsp;—&nbsp; Lulus Tahun 2023</li>
+                    <li>Institut Bisnis dan Informatika Kesatuan &nbsp;—&nbsp; Sekarang</li>
+                </ul>
+            </article>
+
+            <article>
+                <h2>Keahlian (Skills)</h2>
+                <div id="skill-badges">
+                    <span class="badge">HTML &amp; CSS Dasar</span>
+                    <span class="badge">Microsoft Word</span>
+                    <span class="badge">Microsoft Excel</span>
+                    <span class="badge">Microsoft PowerPoint</span>
+                    <span class="badge">Kerjasama Tim</span>
+                    <span class="badge">Komunikasi</span>
+                </div>
+            </article>
+        </section>
+
+        <section id="portfolio" class="card">
+            <article>
+                <h2>Data Portofolio / Proyek</h2>
+                <div class="project-container">
+                    <div class="project-card">
+                        <h3>Proyek Web 1</h3>
+                        <p>Membuat halaman web statis yang menampilkan biodata diri menggunakan HTML dasar.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Proyek Web 2</h3>
+                        <p>Mendesain layout menggunakan elemen semantik HTML5 seperti header, nav, section, article, dan footer.</p>
+                    </div>
+                    <div class="project-card">
+                        <h3>Proyek Web 3</h3>
+                        <p>Menerapkan Cascading Style Sheets (CSS) untuk memperindah tampilan dan tata letak halaman.</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Portofolio Muhammad Haikal Helmi. Tugas Praktikum Web - Latihan 4.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Curriculum Vitae - Portofolio Saya</title>
+    <style>
+        /* Reset dan font dasar (BAB 2.2.7) */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333333;
+        }
+
+        /* ============================
+           HEADER / HERO SECTION
+           ============================ */
+        #hero {
+            background-color: purple;
+            color: white;
+            text-align: center;
+            padding: 50px 20px 30px 20px;
+        }
+
+        /* Foto profil bulat */
+        #foto-profil {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;           /* membuat gambar jadi bulat */
+            border: 4px solid white;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 15px auto;     /* margin auto untuk center (BAB 2.2.7 poin 5) */
+        }
+
+        #hero h1 {
+            font-size: 26px;
+            letter-spacing: 1px;          /* jarak antar huruf (BAB 2.2.7 poin 7) */
+            margin-bottom: 8px;
+        }
+
+        #hero p {
+            font-size: 14px;
+            color: #e0c8f0;
+            margin-bottom: 5px;
+        }
+
+        /* Tombol GitHub */
+        #btn-github {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: white;
+            color: purple;
+            text-decoration: none;        /* hapus underline (BAB 2.2.7 poin 7) */
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        /* Pseudo-class hover tombol GitHub (BAB 2.2.3) */
+        #btn-github:hover {
+            background-color: #e0c8f0;
+        }
+
+        /* ============================
+           CONTAINER UTAMA
+           ============================ */
+        #container {
+            width: 750px;
+            margin: 30px auto;            /* center dengan margin auto (BAB 2.2.7 poin 5) */
+        }
+
+        /* ============================
+           CARD / SECTION KONTEN
+           ============================ */
+        .card {
+            background-color: white;
+            border: 1px solid #dddddd;    /* border kartu (BAB 2.2.7 poin 4) */
+            border-radius: 8px;
+            padding: 25px;                /* padding dalam kartu (BAB 2.2.7 poin 5) */
+            margin-bottom: 20px;          /* jarak antar kartu (BAB 2.2.7 poin 5) */
+        }
+
+        /* Judul tiap section kartu */
+        .card h2 {
+            font-size: 16px;
+            color: purple;
+            border-bottom: 2px solid purple; /* garis bawah judul (BAB 2.2.7 poin 4) */
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            text-transform: uppercase;    /* huruf kapital semua (BAB 2.2.7 poin 7) */
+            letter-spacing: 1px;
+        }
+
+        /* ============================
+           TABEL INFORMASI PRIBADI
+           ============================ */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Selector kombinator: td di dalam table (BAB 2.2.3) */
+        table td {
+            padding: 8px 5px;             /* padding tiap cell (BAB 2.2.7 poin 5) */
+            font-size: 14px;
+            border-bottom: 1px solid #f0f0f0; /* garis pemisah baris (BAB 2.2.7 poin 4) */
+        }
+
+        /* Kolom pertama tabel (label) */
+        table td:first-child {
+            color: #888888;
+            width: 150px;
+            font-weight: bold;
+        }
+
+        /* ============================
+           LIST PENDIDIKAN & SKILLS
+           ============================ */
+        ul, ol {
+            padding-left: 20px;
+        }
+
+        /* Selector kombinator: li di dalam ul/ol (BAB 2.2.3) */
+        ul li, ol li {
+            font-size: 14px;
+            padding: 6px 0;               /* padding tiap item list (BAB 2.2.7 poin 5) */
+            border-bottom: 1px solid #f0f0f0; /* garis pemisah (BAB 2.2.7 poin 4) */
+            color: #444444;
+        }
+
+        /* Pseudo-class hover pada list item (BAB 2.2.3) */
+        ul li:hover, ol li:hover {
+            color: purple;
+        }
+
+        /* ============================
+           BADGE SKILLS
+           ============================ */
+        #skill-badges {
+            margin-top: 10px;
+        }
+
+        /* Selector class badge (BAB 2.2.3) */
+        .badge {
+            display: inline-block;        /* badge sejajar (BAB 2.2.7 poin 10) */
+            background-color: #f0e6ff;
+            color: purple;
+            border: 1px solid purple;
+            padding: 5px 12px;            /* padding badge (BAB 2.2.7 poin 5) */
+            border-radius: 15px;
+            font-size: 12px;
+            margin: 4px 4px 4px 0;
+        }
+
+        /* ============================
+           FOOTER
+           ============================ */
+        footer {
+            text-align: center;           /* teks center (BAB 2.2.7 poin 7) */
+            padding: 20px;
+            font-size: 12px;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HERO: foto + nama + tombol GitHub -->
+    <div id="hero">
+        <img src="images/foto profile cv.png" id="foto-profil" alt="Foto Profil">
+        <h1>Muhammad Haikal Helmi</h1>
+        <p>Mahasiswa Pemrograman Web</p>
+        <p>Institut Bisnis dan Informatika Kesatuan</p>
+        <a href="https://github.com/Haikalhelmi" target="_blank" id="btn-github">
+            &#128279; Profil GitHub Saya
+        </a>
+    </div>
+
+    <!-- CONTAINER KONTEN -->
+    <div id="container">
+
+        <!-- Kartu: Tentang Saya -->
+        <div class="card">
+            <h2>Tentang Saya</h2>
+            <p style="font-size: 14px; line-height: 1.7; color: #555555;">
+                Halo! Nama saya <b>Muhammad Haikal Helmi</b>. Saya adalah mahasiswa 
+                yang sedang belajar Pemrograman Web dan sangat tertarik dalam 
+                pengembangan perangkat lunak.
+            </p>
+        </div>
+
+        <!-- Kartu: Informasi Pribadi -->
+        <div class="card">
+            <h2>Informasi Pribadi</h2>
+            <table>
+                <tr>
+                    <td>Nama Lengkap</td>
+                    <td>Muhammad Haikal Helmi</td>
+                </tr>
+                <tr>
+                    <td>NPM</td>
+                    <td>242310031</td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td>242310031@student.ibik.ac.id</td>
+                </tr>
+                <tr>
+                    <td>Alamat</td>
+                    <td>Kota Bogor, Jawa Barat, Bogor Selatan</td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- Kartu: Riwayat Pendidikan -->
+        <div class="card">
+            <h2>Riwayat Pendidikan</h2>
+            <ul>
+                <li>SMK Informatika Pesat Bogor &nbsp;—&nbsp; Lulus Tahun 2023</li>
+                <li>Institut Bisnis dan Informatika Kesatuan &nbsp;—&nbsp; Sekarang</li>
+            </ul>
+        </div>
+
+        <!-- Kartu: Keahlian dengan badge -->
+        <div class="card">
+            <h2>Keahlian (Skills)</h2>
+            <div id="skill-badges">
+                <span class="badge">HTML &amp; CSS Dasar</span>
+                <span class="badge">Microsoft Word</span>
+                <span class="badge">Microsoft Excel</span>
+                <span class="badge">Microsoft PowerPoint</span>
+                <span class="badge">Kerjasama Tim</span>
+                <span class="badge">Komunikasi</span>
+            </div>
+        </div>
+
+    </div><!-- akhir #container -->
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Copyright &copy; Muhammad Haikal Helmi 2026</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Daftar Hewan Dilindungi</title>
+
+    <!-- CSS Internal: diletakkan di dalam tag <style> di bagian <head> (BAB 2.2.5) -->
+    <style>
+        /* Mengatur tampilan dasar body */
+        body {
+            font-family: Arial, sans-serif; /* properti font-family (BAB 2.2.8) */
+            background-color: #f5f5f5;     /* properti background-color (BAB 2.2.7 poin 3) */
+            margin: 0;                     /* menghilangkan margin default body (BAB 2.2.7 poin 5) */
+            padding: 0;                    /* menghilangkan padding default body (BAB 2.2.7 poin 5) */
+        }
+
+        /* Selector ID untuk wrapper utama (BAB 2.2.3 - Selektor Sederhana #id) */
+        #wrapper {
+            background-color: white;
+            border: 1px solid #cccccc;     /* properti border (BAB 2.2.7 poin 4) */
+            margin: 30px auto;             /* margin: auto untuk memusatkan elemen (BAB 2.2.7 poin 5) */
+            padding: 20px;                 /* padding dalam wrapper (BAB 2.2.7 poin 5) */
+            width: 80%;                    /* properti width (BAB 2.2.7 poin 6) */
+        }
+
+        /* Selector element h1 untuk judul utama (BAB 2.2.3 - Selektor Sederhana) */
+        h1 {
+            color: #009688;                /* properti color menggunakan nilai HEX (BAB 2.2.7 poin 2) */
+            font-size: 22px;               /* properti font-size (BAB 2.2.8) */
+        }
+
+        /* Selector ID untuk container kartu hewan (BAB 2.2.3 - Selektor Sederhana #id) */
+        #container-hewan {
+            display: inline-block;         /* properti display inline-block agar elemen sejajar (BAB 2.2.7 poin 10) */
+            width: 100%;                   /* lebar penuh container */
+        }
+
+        /* Selector CLASS untuk setiap kartu hewan (BAB 2.2.3 - Selektor Sederhana .class) */
+        .kartu {
+            display: inline-block;         /* membuat kartu sejajar secara horizontal (BAB 2.2.7 poin 10) */
+            width: 30%;                    /* lebar tiap kartu (BAB 2.2.7 poin 6) */
+            border: 1px solid #cccccc;     /* border solid pada kartu (BAB 2.2.7 poin 4) */
+            padding: 10px;                 /* padding dalam kartu (BAB 2.2.7 poin 5) */
+            margin-right: 10px;            /* margin kanan antar kartu (BAB 2.2.7 poin 5) */
+            vertical-align: top;           /* agar kartu rata atas */
+            box-sizing: border-box;        /* agar padding tidak menambah lebar */
+        }
+
+        /* Selector descendant: img di dalam .kartu (BAB 2.2.3 - Selektor kombinator) */
+        .kartu img {
+            width: 100%;                   /* gambar mengisi penuh lebar kartu (BAB 2.2.7 poin 6) */
+            height: 150px;                 /* tinggi gambar seragam (BAB 2.2.7 poin 6) */
+        }
+
+        /* Selector descendant: h2 di dalam .kartu (BAB 2.2.3 - Selektor kombinator) */
+        .kartu h2 {
+            color: #009688;                /* warna teks judul hewan (BAB 2.2.7 poin 2) */
+            font-size: 16px;               /* ukuran font judul (BAB 2.2.8) */
+        }
+
+        /* Selector descendant: p di dalam .kartu (BAB 2.2.3 - Selektor kombinator) */
+        .kartu p {
+            font-size: 13px;               /* ukuran font deskripsi (BAB 2.2.8) */
+            color: #333333;                /* warna teks deskripsi (BAB 2.2.7 poin 2) */
+            text-align: left;              /* perataan teks kiri (BAB 2.2.7 poin 7) */
+        }
+
+        /* Selector ID untuk footer (BAB 2.2.3 - Selektor Sederhana #id) */
+        #footer {
+            text-align: center;            /* teks footer di tengah (BAB 2.2.7 poin 7) */
+            margin-top: 20px;              /* jarak atas footer (BAB 2.2.7 poin 5) */
+            padding: 10px;                 /* padding footer (BAB 2.2.7 poin 5) */
+            font-size: 13px;               /* ukuran font footer (BAB 2.2.8) */
+            color: #666666;                /* warna teks footer (BAB 2.2.7 poin 2) */
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Wrapper utama menggunakan selector ID #wrapper -->
+    <div id="wrapper">
+
+        <!-- Judul halaman menggunakan selector element h1 -->
+        <h1>Daftar Hewan Dilindungi</h1>
+
+        <!-- Container kartu hewan menggunakan selector ID #container-hewan -->
+        <div id="container-hewan">
+
+            <!-- Kartu 1: Orang Utan - menggunakan selector class .kartu -->
+            <div class="kartu">
+                <!-- Gambar orang utan dari sumber bebas -->
+                <img src="../Pertemuan_2/img/orang utan.jpg" 
+                     alt="Orang Utan">
+                <!-- Judul hewan menggunakan selector descendant .kartu h2 -->
+                <h2>Orang Utan</h2>
+                <!-- Deskripsi hewan menggunakan selector descendant .kartu p -->
+                <p>Orang utan dicirikan oleh rambut di seluruh badannya yang berwarna 
+                   kemerahan. Satwa ini merupakan mamalia arboreal terbesar yang menghabiskan 
+                   hampir seluruh waktunya di pepohonan. Lengannya yang panjang dan kuat serta 
+                   tangan dan kakinya yang dapat mencengkeram erat.</p>
+            </div>
+
+            <!-- Kartu 2: Kera Emas - menggunakan selector class .kartu -->
+            <div class="kartu">
+                <!-- Gambar kera emas dari sumber bebas -->
+                <img src="../Pertemuan_2/img/kera emas.jpg" 
+                     alt="Kera Emas">
+                <!-- Judul hewan -->
+                <h2>Kera Emas</h2>
+                <!-- Deskripsi hewan -->
+                <p>Monyet yang unik ini juga dikenal sebagai hewan yang memiliki adaptasi 
+                   yang sangat baik dengan lingkungan yang bersuhu sangat dingin. Umumnya, 
+                   monyet hidung pesek rambut emas tinggal di hutan pegunungan.</p>
+            </div>
+
+            <!-- Kartu 3: Burung Cendrawasih - menggunakan selector class .kartu -->
+            <div class="kartu">
+                <!-- Gambar burung cendrawasih dari sumber bebas -->
+                <img src="../Pertemuan_2/img/cendrawasih.jpg" 
+                     alt="Burung Cendrawasih">
+                <!-- Judul hewan -->
+                <h2>Burung Cendrawasih</h2>
+                <!-- Deskripsi hewan -->
+                <p>Burung cenderawasih termasuk ke dalam hewan langka dan hanya bisa 
+                   ditemukan di Papua. Burung cendrawasih punya tampilan yang cantik yang 
+                   membuat burung ini sering menjadi perburuan liar untuk didagangkan.</p>
+            </div>
+
+        </div><!-- akhir #container-hewan -->
+
+        <!-- Footer menggunakan selector ID #footer -->
+        <div id="footer">
+            <p>Copyright &copy; Haikal Helmi 2026</p>
+        </div>
+
+    </div><!-- akhir #wrapper -->
+
+</body>
+</html>

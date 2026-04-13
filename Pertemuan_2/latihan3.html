@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            background-color: purple;
+            padding: 10px;
+        }
+
+        header a {
+            text-decoration: none;
+            color: white;
+            font-weight: lighter;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        a:hover {
+            background-color: white;
+            color: purple;
+        }
+
+        /* ============================
+           SECTION - Quote
+           ============================ */
+        section {
+            background-color: #dce8f5;
+            padding: 50px 20px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        #quote {
+            font-size: 28px;
+            font-style: italic;
+            color: #333333;
+            line-height: 1.8;
+        }
+
+        #quote-author {
+            font-size: 13px;
+            color: #555555;
+            margin-top: 15px;
+            letter-spacing: 2px;
+        }
+
+        /* ============================
+           ARTICLE - Kartu Artikel
+           ============================ */
+        #container-artikel {
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 30px;
+        }
+
+        .kartu-artikel {
+            display: inline-block;
+            width: 47%;
+            border: 1px solid #cccccc;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        .kartu-artikel img {
+            width: 100%;
+            height: 200px;
+            display: block;
+            object-fit: cover;
+        }
+
+        .konten-kartu {
+            padding: 15px;
+        }
+
+        .konten-kartu p {
+            font-size: 13px;
+            color: #333333;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+
+        .kartu-footer {
+            display: inline-block;
+            width: 100%;
+        }
+
+        /* Tombol View - Pseudo-class :hover (BAB 2.2.3) */
+        .btn-view {
+            display: inline-block;
+            border: 1px solid purple;
+            color: purple;
+            padding: 5px 15px;
+            text-decoration: none;
+            font-size: 13px;
+            background-color: #ffffff;
+        }
+
+        .btn-view:hover {
+            background-color: purple;
+            color: #ffffff;
+        }
+
+        .durasi {
+            float: right;
+            font-size: 12px;
+            color: #888888;
+            margin-top: 5px;
+        }
+
+        /* ============================
+           FOOTER
+           ============================ */
+        footer {
+            text-align: center;
+            padding: 15px;
+            border-top: 1px solid #cccccc;
+            font-size: 13px;
+            color: #666666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center; gap: 10px;">
+            <img src="../Pertemuan_2/img/LOGO_IBIK (1).png" style="width: 30px; height: 30px;" alt="Logo IBIK">
+            <a href="#">Home</a>
+            <a href="../Pertemuan_1/my_portofolio/css/index.html">Profile</a>
+            <a href="https://www.ibik.ac.id/" target="_blank">Contact Us</a>
+        </div>
+    </header>
+
+    <!-- SECTION: Kutipan -->
+    <section>
+        <p id="quote">
+            &ldquo;The purpose<br>
+            of our lives<br>
+            is to be happy.&rdquo;
+        </p>
+        <p id="quote-author">- DALAI LAMA -</p>
+    </section>
+
+    <!-- ARTICLE: Dua kartu artikel -->
+    <div id="container-artikel">
+
+        <!-- Kartu 1: redirect ke Latihan-1.html -->
+        <div class="kartu-artikel">
+            <img src="../Pertemuan_2/img/atom.webp"
+                 alt="Atom">
+            <div class="konten-kartu">
+                <p>An atom is the smallest unit of ordinary matter that
+                   forms a chemical element. Every solid, liquid, gas,
+                   and plasma is composed of neutral or ionized atoms.</p>
+                <div class="kartu-footer">
+                    <a href="Latihan-1.html" class="btn-view">View</a>
+                    <span class="durasi">9 mins</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kartu 2: redirect ke Latihan-2.html -->
+        <div class="kartu-artikel">
+            <img src="../Pertemuan_2/img/wwf.jpeg"
+                 alt="World Wildlife Fund">
+            <div class="konten-kartu">
+                <p>World Wildlife Fund is committed to endangered species
+                   protection. See how we are ensuring that the world our
+                   children inherit will be home to the same.</p>
+                <div class="kartu-footer">
+                    <a href="Latihan-2.html" class="btn-view">View</a>
+                    <span class="durasi">9 mins</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>Copyright &copy; Haikal Helmi 2026</p>
+    </footer>
+
+</body>
+</html>
