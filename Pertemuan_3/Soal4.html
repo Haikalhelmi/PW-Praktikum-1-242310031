@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kalkulator Saldo Anda</title>
+    <SCRIPT LANGUAGE="JavaScript">
+        function hitung() {
+            
+            var saldo  = parseFloat(document.fform.saldo.value);
+            var bunga  = parseFloat(document.fform.bunga.value);
+            var waktu  = parseInt(document.fform.waktu.value);
+
+            
+            if (isNaN(saldo))  saldo  = 0.0;
+            if (isNaN(bunga))  bunga  = 0.0;
+            if (isNaN(waktu))  waktu  = 0;
+
+            
+            var hasil  = "";
+            var saldoSekarang = saldo;
+
+            for (var i = 1; i <= waktu; i++) {
+                saldoSekarang = saldoSekarang + (saldoSekarang * bunga / 100);
+                hasil += "Saldo Bulan " + i + " = Rp. " + saldoSekarang.toFixed(0) + "\n";
+            }
+
+            
+            document.fform.output.value = hasil;
+        }
+
+        function ulang() {
+            document.fform.saldo.value  = "";
+            document.fform.bunga.value  = "";
+            document.fform.waktu.value  = "";
+            document.fform.output.value = "";
+        }
+    </SCRIPT>
+</head>
+<body>
+
+<FORM NAME="fform">
+    <H1>Kalkulator Saldo Tabungan</H1>
+    <HR>
+
+    <PRE>
+Saldo Awal (Rp) : <INPUT TYPE="text" SIZE="15" NAME="saldo">
+Bunga (%)       : <INPUT TYPE="text" SIZE="15" NAME="bunga">
+Waktu (Bulan)   : <INPUT TYPE="text" SIZE="15" NAME="waktu">
+    </PRE>
+
+    <INPUT TYPE="button" VALUE="Hitung"  onclick="hitung()">
+    <INPUT TYPE="button" VALUE="Ulang"   onclick="ulang()">
+
+    <H3>Output :</H3>
+    <TEXTAREA NAME="output" ROWS="10" COLS="35"></TEXTAREA>
+
+</FORM>
+
+</body>
+</html>

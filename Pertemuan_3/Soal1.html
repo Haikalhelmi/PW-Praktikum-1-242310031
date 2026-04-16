@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="tampilkanData(event)">
+        <label for="nim">NIM:</label><br>
+        <input type="text" id="nim" name="nim"><br><br>
+
+        <label for="nama">Nama:</label><br>
+        <input type="text" id="nama" name="nama"><br><br>
+
+        <label for="jenis_kelamin">Jenis Kelamin:</label><br>
+        <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Laki-laki">
+        <label for="laki_laki">Laki-laki</label><br>
+        <input type="radio" id="jenis_kelamin" name="jenis_kelamin" value="Perempuan">
+        <label for="perempuan">Perempuan</label><br><br>
+
+        <label for="agama">Agama:</label><br>
+        <select id="agama" name="agama">
+            <option value="Islam">Islam</option>
+            <option value="Kristen">Kristen</option>
+            <option value="Katolik">Katolik</option>
+            <option value="Hindu">Hindu</option>
+            <option value="Budha">Budha</option>
+            <option value="Konghucu">Konghucu</option>
+        </select><br><br>
+
+        <label for="status">Status:</label><br>
+        <input type="radio" name="status" id="status" value="Belum Menikah" required>Belum
+        Menikah <br>
+        <input type="radio" name="status" id="status" value="Menikah" required>Menikah <br><br>
+
+        <label for="jurusan">Jurusan:</label><br>
+        <input type="text" id="jurusan" name="jurusan"><br><br>
+
+        <label for="komentar">Komentar:</label><br>
+        <textarea id="komentar" name="komentar" rows="4" cols="50"></textarea><br><br>
+
+        <button type="submit">
+            Kirim
+        </button>
+    </form>
+
+    <h1>Output Data</h1>
+    <p><b>Nim:</b> <span id="output_nim"></span></p>
+    <p><b>Nama:</b> <span id="output_nama"></span></p>
+    <p><b>Jenis Kelamin:</b> <span id="output_jenis_kelamin"></span></p>
+    <p><b>Agama:</b> <span id="output_agama"></span></p>
+    <p><b>Status:</b> <span id="output_status"></span></p>
+    <p><b>Jurusan:</b> <span id="output_jurusan"></span></p>
+    <p><b>Komentar:</b> <span id="output_komentar"></span></p>
+<script>
+    function tampilkanData(event) {
+        event.preventDefault();
+
+        var Nim = document.getElementById("nim").value;
+        document.getElementById("output_nim").innerText = Nim;
+
+        var Nama = document.getElementById("nama").value;
+        document.getElementById("output_nama").innerText = Nama;
+
+        var JenisKelamin = document.getElementById('jenis_kelamin').value;
+        document.getElementById("output_jenis_kelamin").innerText = JenisKelamin;
+
+        var Agama = document.getElementById("agama").value;
+        document.getElementById("output_agama").innerText = Agama;
+
+        var Status = document.getElementById('status').value;
+        document.getElementById("output_status").innerText = Status;
+
+        var Jurusan = document.getElementById("jurusan").value;
+        document.getElementById("output_jurusan").innerText = Jurusan;
+
+        var Komentar = document.getElementById("komentar").value;
+        document.getElementById("output_komentar").innerText = Komentar;
+    }
+</script>
+</body>
+</html>

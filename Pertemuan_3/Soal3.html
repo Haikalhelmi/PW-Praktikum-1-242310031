@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit="hitung(event)" onreset="resetFrom()">
+        <table border="1">
+            <tr>
+                <th colspan="3">PERHITUNGAN FAKTORIAL DAN DERET</th>
+            </tr>
+            <tr>
+                <td>N</td>
+                <td><input type="number" name="angka" id="angka"></td>
+                <td>Masukan nilai yang akan di hitung</td>
+            </tr>
+            <tr>
+                <td>hasil</td>
+                <td><span id="hasil"></span></td>
+                <td>Hasil perhitungan</td>
+            </tr>
+            <tr>
+                <td>Faktorial</td>
+                <td><span id="faktorial"></span></td>
+                <td>Hasil Faktorial Muncul Disini</td>
+            </tr>
+            <tr>
+                <td>Deret</td>
+                <td><span id="deret"></span></td>
+                <td>Hasil Deret Muncul Disini</td>
+            </tr>
+            <tr>
+                <td colspan="3" align="center">
+                    <button type="submit">Hitung</button>
+                    <button type="reset">Reset</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+<script>
+    function hitung(event) {
+        event.preventDefault();
+
+        let angka = perseInt(document.getElementById("angka").value)
+        let faktorial = 1;
+        let jumlah = 0;
+
+        for (let i = 1; i <= angka; i++) {
+            faktorial *= i;
+            jumlah += i;
+        }
+
+        document.getElementById("hasil").innerText = jumlah;
+        document.getElementById("faktorial").innerText = faktorial;
+        document.getElementById("angka").innerText = "jumlah";
+    }
+
+    function resetform() {
+        document.getElementById("hasil").innerText = "";
+        document.getElementById("faktorial").innerText = "";
+        document.getElementById("angka").innerText = "";
+    }
+</script>
+</body>
+</html>

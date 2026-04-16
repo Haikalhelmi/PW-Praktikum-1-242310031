@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Travel IBIK Abadi</title>
+</head>
+<body>
+
+    <h2>Form Pemesanan Tiket</h2>
+
+    <table border="1" cellpadding="5" cellspacing="0" style="margin-bottom: 20px; text-align: center;">
+        <tr style="background-color: #e0e0e0;">
+            <th></th>
+            <th>Eksekutif</th>
+            <th>Bisnis</th>
+            <th>Ekonomi</th>
+        </tr>
+        <tr>
+            <th style="background-color: #e0e0e0; text-align: left;">Jakarta</th>
+            <td>70000</td>
+            <td>40000</td>
+            <td>10000</td>
+        </tr>
+        <tr>
+            <th style="background-color: #e0e0e0; text-align: left;">Solo</th>
+            <td>80000</td>
+            <td>50000</td>
+            <td>20000</td>
+        </tr>
+        <tr>
+            <th style="background-color: #e0e0e0; text-align: left;">Surabaya</th>
+            <td>90000</td>
+            <td>60000</td>
+            <td>30000</td>
+        </tr>
+    </table>
+
+    <form id="formPemesanan">
+        Nama Pemesan:<br>
+        <input type="text" id="namaPemesan" required><br><br>
+
+        Tujuan:<br>
+        <select id="tujuan">
+            <option value="Jakarta">Jakarta</option>
+            <option value="Solo">Solo</option>
+            <option value="Surabaya">Surabaya</option>
+        </select><br><br>
+
+        Kelas:<br>
+        <input type="radio" name="kelas" value="Eksekutif" checked> Eksekutif<br>
+        <input type="radio" name="kelas" value="Bisnis"> Bisnis<br>
+        <input type="radio" name="kelas" value="Ekonomi"> Ekonomi<br><br>
+
+        Banyak Tiket:<br>
+        <input type="number" id="banyakTiket" min="1" value="1" required><br><br>
+
+        Status Member:<br>
+        <input type="radio" name="statusMember" value="Member"> Anggota Member Damri<br>
+        <input type="radio" name="statusMember" value="Bukan" checked> Bukan Anggota<br><br>
+
+        <button type="button" onclick="hitungTiket()">Proses</button>
+    </form>
+
+    <h3>Output Data:</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <td>Nama Pemesan</td>
+            <td id="outNama">-</td>
+        </tr>
+        <tr>
+            <td>Harga Tiket</td>
+            <td id="outHarga">Rp 0</td>
+        </tr>
+        <tr>
+            <td>Subtotal</td>
+            <td id="outSubtotal">Rp 0</td>
+        </tr>
+        <tr>
+            <td>Diskon</td>
+            <td id="outDiskon">Rp 0</td>
+        </tr>
+        <tr>
+            <td><b>Total Bayar</b></td>
+            <td><b id="outTotal">Rp 0</b></td>
+        </tr>
+    </table>
+
+    <script>
+        function hitungTiket() {
+            const nama = document.getElementById('namaPemesan').value;
+            const tujuan = document.getElementById('tujuan').value;
+            const kelas = document.querySelector('input[name="kelas"]:checked').value;
+            const banyakTiket = parseInt(document.getElementById('banyakTiket').value);
+            const statusMember = document.querySelector('input[name="statusMember"]:checked').value;
+
+            let hargaTiket = 0;
+
+            if (tujuan === "Jakarta") {
+                if (kelas === "Eksekutif") hargaTiket = 70000;
+                else if (kelas === "Bisnis") hargaTiket = 40000;
+                else if (kelas === "Ekonomi") hargaTiket = 10000;
+            } 
+            else if (tujuan === "Solo") {
+                if (kelas === "Eksekutif") hargaTiket = 80000;
+                else if (kelas === "Bisnis") hargaTiket = 50000;
+                else if (kelas === "Ekonomi") hargaTiket = 20000;
+            } 
+            else if (tujuan === "Surabaya") {
+                if (kelas === "Eksekutif") hargaTiket = 90000;
+                else if (kelas === "Bisnis") hargaTiket = 60000;
+                else if (kelas === "Ekonomi") hargaTiket = 30000;
+            }
+
+            const subtotal = hargaTiket * banyakTiket;
+
+            let diskon = 0;
+            if (statusMember === "Member") {
+                diskon = subtotal * 0.10;
+            }
+
+            const totalBayar = subtotal - diskon;
+
+            document.getElementById('outNama').innerText = nama || "-";
+            document.getElementById('outHarga').innerText = "Rp " + hargaTiket.toLocaleString('id-ID');
+            document.getElementById('outSubtotal').innerText = "Rp " + subtotal.toLocaleString('id-ID');
+            document.getElementById('outDiskon').innerText = "Rp " + diskon.toLocaleString('id-ID');
+            document.getElementById('outTotal').innerText = "Rp " + totalBayar.toLocaleString('id-ID');
+        }
+    </script>
+
+</body>
+</html>
