@@ -1,0 +1,110 @@
+{
+  "info": {
+    "_postman_id": "r3petshop-quiz2-collection",
+    "name": "Quiz 2 Pemrograman Web - R3 Petshop API",
+    "description": "Collection Postman untuk Testing API CRUD Modul Produk R3 Petshop",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "1. GET All Products (Read)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"]
+        },
+        "description": "Mengambil seluruh daftar produk di database"
+      },
+      "response": []
+    },
+    {
+      "name": "2. GET Product By ID (Read Single)",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products", "1"]
+        },
+        "description": "Mengambil detail produk berdasarkan ID"
+      },
+      "response": []
+    },
+    {
+      "name": "3. POST Create Product (Create)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_produk\": \"Whiskas Junior Ocean Fish 450gr\",\n  \"kategori\": \"Cat Food\",\n  \"berat_varian\": \"450gr\",\n  \"harga\": 28000,\n  \"url_gambar\": \"https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=300\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products"]
+        },
+        "description": "Menambahkan produk baru ke database"
+      },
+      "response": []
+    },
+    {
+      "name": "4. PUT Update Product (Update)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nama_produk\": \"Animal & Co Pouch 80gr rasa Chicken Adult (PROMO)\",\n  \"kategori\": \"Cat Food\",\n  \"berat_varian\": \"80gr\",\n  \"harga\": 7500,\n  \"url_gambar\": \"https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=300\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products", "1"]
+        },
+        "description": "Memperbarui data produk berdasarkan ID"
+      },
+      "response": []
+    },
+    {
+      "name": "5. DELETE Product (Delete)",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/products/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "products", "1"]
+        },
+        "description": "Menghapus produk dari database berdasarkan ID"
+      },
+      "response": []
+    }
+  ]
+}
